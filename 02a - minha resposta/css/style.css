@@ -1,0 +1,145 @@
+/* GERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/nuvens.jpg');
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+}
+
+::selection {
+    color: #990000;
+    background: #ff9933;
+}
+
+/* FONTS */
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    color: #660033;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #b30059;   
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background-color: #ffffff;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.portfolio-sobre {
+
+}
+
+.portfolio-sobre_img {
+    margin-top: 80px;
+    width: 300px;
+    max-width:100%;
+    height: auto;
+    border-radius: 50%;
+} 
+
+.portfolio-sobre_img:hover {
+    opacity: 0.3;
+}  
+    
+.sobre-conteudo {
+    /* font-family: 'Lato', sans-serif; */
+}
+
+.portfolio-redessociais {
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.portfolio-redessociais img {
+    max-width: 87px;
+    height: auto;
+    margin: 5px;
+}
+
+.portfolio-redessociais a,
+.portfolio-redessociais a:link,
+.portfolio-redessociais a:visited {
+    text-decoration: none;
+    filter:hue-rotate(50deg);
+    opacity: 0.8;    
+}
+
+.portfolio-redessociais a:hover {
+    text-decoration: none;
+    filter: brightness(0%);
+    opacity: 1;
+}
+
+.portfolio-redessociais a:active {
+    opacity: 0.3;
+}
+
+
+/* @MEDIA QUERIES */
+
+
+@media only screen and (max-width: 600px) {
+    .portfolio {
+        background-color: #fff1e6;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .portfolio {
+        background-color: #ffe4cc;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .portfolio {
+        background-color: #ffd7b3;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .portfolio {
+        background-color: #ffc999;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .portfolio {
+        background-color: #ffbb80;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .portfolio {
+        background-color: #ffad66;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .portfolio {
+        background-color: #ffa04d;
+    }
+}
