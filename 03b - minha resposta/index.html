@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3 -CONTINUAÇÃO</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <form action="#" class="form">
+
+        <div>
+            <label for="username">Nome</label>
+            <input type="text" name="username" class="half-col" id="username">
+        </div>
+
+        <div>
+            <label for="texto">Senha</label>
+            <input type="text" name="password" class="half-col" id="password">
+        </div>
+
+        <div>
+            <input class="btnCheck" type="submit" value="Checar nome e senha" id="btnCheckNamePassword">
+        </div>
+
+        <div>
+            <label for="texto">Escolha uma ou múltiplas opções</label>
+            <div class="half-col">
+                <input type="checkbox" name="checkbox" id="mulher" value="mulher"> Mulher <br>
+                <input type="checkbox" name="checkbox" id="poderosa" value="poderosa"> Poderosa <br>
+                <input type="checkbox" name="checkbox" id="linda" value="linda"> Linda <br>
+                <input type="checkbox" name="checkbox" id="maravilhosa" value="maravilhosa"> Maravilhosa <br>
+            </div>
+        </div>
+
+        <div>
+            <input class="btnCheck" type="submit" value="Checar checkbox" id="btnCheckCheckbox">
+        </div>
+
+        <div>
+            <label for="texto">Escolha uma opção</label>
+            <div class="half-col">
+                <input type="radio" name="poder" value="Mulher"> Super força <br>
+            </div>
+        </div>
+
+        <div>
+            <label for="texto">Selecione um tópico</label>
+            <select name="dropdown">
+                <option value="contato">Deixar meu site mais bonito</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="texto">Escolha um valor</label>
+            <input type="text" name="valor">
+        </div>
+
+        <div>
+            <label for="texto">Comentário</label>
+            <input type="text" name="valor">
+        </div>
+
+        <div>
+            <div class="half-col"></div>
+            <button class="btn btn_grey">Limpar</button>
+            <input class="btn btn_purple" type="submit" value="Enviar" id="salvarFormulario">
+        </div>
+    </form>
+
+
+    <script>
+        // VALIDAÇÃO DO NOME E SENHA
+        var btnCheckNamePassword = document.querySelector("#btnCheckNamePassword"); //uma alternativa é usar document.getElementById("salvarFormulario")
+        btnCheckNamePassword.addEventListener('click', function (namePassword) {
+            namePassword.preventDefault();
+            var username = document.querySelector("#username").value;
+            var password = document.querySelector("#password").value;
+            if (username.length == 0 && password.length <= 6) {
+                alert(
+                    "ERROS:\nO campo \"Nome\" é obrigatório.\nO campo \"Senha\" precisa ter mais de 6 caracteres."
+                );
+            } else if (username.length == 0 && password.length > 6) {
+                alert("ERRO:\nO campo \"Nome\" é obrigatório.");
+            } else if (username.length > 0 && password.length <= 6) {
+                alert("ERRO:\nO campo \"Senha\" precisa ter mais de 6 caracteres");
+            } else {
+                alert("SUAVE NA NAVE");
+            }
+        });
+
+        //VALIDAÇÃO DOS CHECKBOXES
+        var btnCheckCheckbox = document.querySelector("#btnCheckCheckbox"); //uma alternativa é usar document.getElementById("_____")
+        btnCheckCheckbox.addEventListener('click', function (checkForm) {
+            checkForm.preventDefault();
+            var checked = false;
+            var elements = document.getElementsByName("checkbox");
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].checked) {
+                    checked = true;
+                    alert("DE BOA NA LAGOA")
+                }
+            }
+            if (!checked) {
+                alert("ERRO: Selecione pelo menos uma opção");
+            }
+            return checked;
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
